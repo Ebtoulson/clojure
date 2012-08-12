@@ -13,6 +13,6 @@
 		a (reverse (range (.pow (bigint 10) (dec digits))
 	  	(.pow (bigint 10) digits))) 
 		b (range a (.pow (bigint 10) digits))
-	]	(* b a)))))
+	] (* b a)))))
 
 ; (largest_palindrome 3) => 906609
