@@ -11,7 +11,7 @@
 (defn largest_palindrome [digits]
 	(apply max (filter #(palindrome? %) (for [
 		a (reverse (range (.pow (bigint 10) (dec digits))
-	  	(.pow (bigint 10) digits))) 
+			(.pow (bigint 10) digits))) 
 		b (range a (.pow (bigint 10) digits))
 	] (* b a)))))
 
