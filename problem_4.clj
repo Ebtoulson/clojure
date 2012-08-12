@@ -6,13 +6,13 @@
 ; two 3-digit numbers.
 
 (defn palindrome? [palin]
-	(= (str palin) (apply str (reverse (str palin)))))
+  (= (str palin) (apply str (reverse (str palin)))))
 
 (defn largest_palindrome [digits]
-	(apply max (filter #(palindrome? %) (for [
-		a (reverse (range (.pow (bigint 10) (dec digits))
-			(.pow (bigint 10) digits))) 
-		b (range a (.pow (bigint 10) digits))
-	] (* b a)))))
+  (apply max (filter #(palindrome? %) (for [
+    a (reverse (range (.pow (bigint 10) (dec digits))
+      (.pow (bigint 10) digits))) 
+    b (range a (.pow (bigint 10) digits))
+  ] (* b a)))))
 
 ; (largest_palindrome 3) => 906609
